@@ -1,160 +1,188 @@
-# Byte-compiled / optimized / DLL files
-__pycache__/
-*.py[cod]
-*$py.class
+# Function to calculate commission
+def calculate_commission(amount, commission_percent):
+    return amount * commission_percent / 100
 
-# C extensions
-*.so
+# Function to format currency
+def format_currency(amount):
+    return "$ {:.2f}".format(amount)
 
-# Distribution / packaging
-.Python
-build/
-develop-eggs/
-dist/
-downloads/
-eggs/
-.eggs/
-lib/
-lib64/
-parts/
-sdist/
-var/
-wheels/
-share/python-wheels/
-*.egg-info/
-.installed.cfg
-*.egg
-MANIFEST
+# Function to calculate profit or loss
+def calculate_profit_loss(amount_sold, commission_sold, amount_bought, commission_bought):
+    return (amount_sold - commission_sold) - (amount_bought + commission_bought)
 
-# PyInstaller
-#  Usually these files are written by a python script from a template
-#  before PyInstaller builds the exe, so as to inject date/other infos into it.
-*.manifest
-*.spec
+# Hardcoded values for the scenario
+stock_name = "Kaplack, Inc."
+num_shares = 10000
+purchase_price = 33.92
+selling_price = 35.92
+commission_percent = 0.04  # 4% commission
 
-# Installer logs
-pip-log.txt
-pip-delete-this-directory.txt
+# Calculate the amounts
+amount_paid = num_shares * purchase_price
+commission_paid_purchase = calculate_commission(amount_paid, commission_percent)
+amount_sold = num_shares * selling_price
+commission_paid_sale = calculate_commission(amount_sold, commission_percent)
 
-# Unit test / coverage reports
-htmlcov/
-.tox/
-.nox/
-.coverage
-.coverage.*
-.cache
-nosetests.xml
-coverage.xml
-*.cover
-*.py,cover
-.hypothesis/
-.pytest_cache/
-cover/
+# Calculate profit or loss
+profit_loss = calculate_profit_loss(amount_sold, commission_paid_sale, amount_paid, commission_paid_purchase)
 
-# Translations
-*.mo
-*.pot
+# Display the results
+print("\nAmount paid for the stock:", format_currency(amount_paid))
+print("Commission paid on the purchase:", format_currency(commission_paid_purchase))
+print("Amount the stock sold for:", format_currency(amount_sold))
+print("Commission paid on the sale:", format_currency(commission_paid_sale))
+print("Profit (or loss if negative):", format_currency(profit_loss))
 
-# Django stuff:
-*.log
-local_settings.py
-db.sqlite3
-db.sqlite3-journal
 
-# Flask stuff:
-instance/
-.webassets-cache
 
-# Scrapy stuff:
-.scrapy
+#TESTER-2
 
-# Sphinx documentation
-docs/_build/
+# Function to calculate commission
+def calculate_commission(amount, commission_percent):
+    return amount * commission_percent / 100
 
-# PyBuilder
-.pybuilder/
-target/
+# Function to format currency
+def format_currency(amount):
+    return "$ {:.2f}".format(amount)
 
-# Jupyter Notebook
-.ipynb_checkpoints
+# Function to calculate profit or loss
+def calculate_profit_loss(amount_sold, commission_sold, amount_bought, commission_bought):
+    return (amount_sold - commission_sold) - (amount_bought + commission_bought)
 
-# IPython
-profile_default/
-ipython_config.py
+# Hardcoded values for the scenario
+stock_name = "IBM"
+num_shares = 15000
+purchase_price = 50.25
+selling_price = 100.20
+commission_percent = 0.02  # 2% commission
 
-# pyenv
-#   For a library or package, you might want to ignore these files since the code is
-#   intended to run in multiple environments; otherwise, check them in:
-# .python-version
+# Calculate the amounts
+amount_paid = num_shares * purchase_price
+commission_paid_purchase = calculate_commission(amount_paid, commission_percent)
+amount_sold = num_shares * selling_price
+commission_paid_sale = calculate_commission(amount_sold, commission_percent)
 
-# pipenv
-#   According to pypa/pipenv#598, it is recommended to include Pipfile.lock in version control.
-#   However, in case of collaboration, if having platform-specific dependencies or dependencies
-#   having no cross-platform support, pipenv may install dependencies that don't work, or not
-#   install all needed dependencies.
-#Pipfile.lock
+# Calculate profit or loss
+profit_loss = calculate_profit_loss(amount_sold, commission_paid_sale, amount_paid, commission_paid_purchase)
 
-# poetry
-#   Similar to Pipfile.lock, it is generally recommended to include poetry.lock in version control.
-#   This is especially recommended for binary packages to ensure reproducibility, and is more
-#   commonly ignored for libraries.
-#   https://python-poetry.org/docs/basic-usage/#commit-your-poetrylock-file-to-version-control
-#poetry.lock
+# Display the results
+print("\nAmount paid for the stock:", format_currency(amount_paid))
+print("Commission paid on the purchase:", format_currency(commission_paid_purchase))
+print("Amount the stock sold for:", format_currency(amount_sold))
+print("Commission paid on the sale:", format_currency(commission_paid_sale))
+print("Profit (or loss if negative):", format_currency(profit_loss))
 
-# pdm
-#   Similar to Pipfile.lock, it is generally recommended to include pdm.lock in version control.
-#pdm.lock
-#   pdm stores project-wide configurations in .pdm.toml, but it is recommended to not include it
-#   in version control.
-#   https://pdm.fming.dev/#use-with-ide
-.pdm.toml
 
-# PEP 582; used by e.g. github.com/David-OConnor/pyflow and github.com/pdm-project/pdm
-__pypackages__/
 
-# Celery stuff
-celerybeat-schedule
-celerybeat.pid
+#TESTER-3
 
-# SageMath parsed files
-*.sage.py
+# Function to calculate commission
+def calculate_commission(amount, commission_percent):
+    return amount * commission_percent / 100
 
-# Environments
-.env
-.venv
-env/
-venv/
-ENV/
-env.bak/
-venv.bak/
+# Function to format currency
+def format_currency(amount):
+    return "$ {:.2f}".format(amount)
 
-# Spyder project settings
-.spyderproject
-.spyproject
+# Function to calculate profit or loss
+def calculate_profit_loss(amount_sold, commission_sold, amount_bought, commission_bought):
+    return (amount_sold - commission_sold) - (amount_bought + commission_bought)
 
-# Rope project settings
-.ropeproject
+# Hardcoded values for the scenario
+stock_name = "XYZ Corporation"
+num_shares = 10000
+purchase_price = 20.50
+selling_price = 22.75
+commission_percent = 3.0  # 3% commission
 
-# mkdocs documentation
-/site
+# Calculate the amounts
+amount_paid = num_shares * purchase_price
+commission_paid_purchase = calculate_commission(amount_paid, commission_percent)
+amount_sold = num_shares * selling_price
+commission_paid_sale = calculate_commission(amount_sold, commission_percent)
 
-# mypy
-.mypy_cache/
-.dmypy.json
-dmypy.json
+# Calculate profit or loss
+profit_loss = calculate_profit_loss(amount_sold, commission_paid_sale, amount_paid, commission_paid_purchase)
 
-# Pyre type checker
-.pyre/
+# Display the results
+print("\nAmount paid for the stock:", format_currency(amount_paid))
+print("Commission paid on the purchase:", format_currency(commission_paid_purchase))
+print("Amount the stock sold for:", format_currency(amount_sold))
+print("Commission paid on the sale:", format_currency(commission_paid_sale))
+print("Profit (or loss if negative):", format_currency(profit_loss))
 
-# pytype static type analyzer
-.pytype/
 
-# Cython debug symbols
-cython_debug/
+#TESTER-4
 
-# PyCharm
-#  JetBrains specific template is maintained in a separate JetBrains.gitignore that can
-#  be found at https://github.com/github/gitignore/blob/main/Global/JetBrains.gitignore
-#  and can be added to the global gitignore or merged into this file.  For a more nuclear
-#  option (not recommended) you can uncomment the following to ignore the entire idea folder.
-#.idea/
+# Function to calculate commission
+def calculate_commission(amount, commission_percent):
+    return amount * commission_percent / 100
+
+# Function to format currency
+def format_currency(amount):
+    return "$ {:.2f}".format(amount)
+
+# Function to calculate profit or loss
+def calculate_profit_loss(amount_sold, commission_sold, amount_bought, commission_bought):
+    return (amount_sold - commission_sold) - (amount_bought + commission_bought)
+
+# Hardcoded values for the scenario
+stock_name = "Tech Solutions Inc."
+num_shares = 5000
+purchase_price = 45.75
+selling_price = 55.25
+commission_percent = 2.5  # 2.5% commission
+
+# Calculate the amounts
+amount_paid = num_shares * purchase_price
+commission_paid_purchase = calculate_commission(amount_paid, commission_percent)
+amount_sold = num_shares * selling_price
+commission_paid_sale = calculate_commission(amount_sold, commission_percent)
+
+# Calculate profit or loss
+profit_loss = calculate_profit_loss(amount_sold, commission_paid_sale, amount_paid, commission_paid_purchase)
+
+# Display the results
+print("\nAmount paid for the stock:", format_currency(amount_paid))
+print("Commission paid on the purchase:", format_currency(commission_paid_purchase))
+print("Amount the stock sold for:", format_currency(amount_sold))
+print("Commission paid on the sale:", format_currency(commission_paid_sale))
+print("Profit (or loss if negative):", format_currency(profit_loss))
+
+
+#TESTER-5
+
+# Function to calculate commission
+def calculate_commission(amount, commission_percent):
+    return amount * commission_percent / 100
+
+# Function to format currency
+def format_currency(amount):
+    return "$ {:.2f}".format(amount)
+
+# Function to calculate profit or loss
+def calculate_profit_loss(amount_sold, commission_sold, amount_bought, commission_bought):
+    return (amount_sold - commission_sold) - (amount_bought + commission_bought)
+
+# Hardcoded values for the scenario
+stock_name = "RealEstateTrust Corp."
+num_shares = 2000
+purchase_price = 65.30
+selling_price = 70.50
+commission_percent = 1.75  # 1.75% commission
+
+# Calculate the amounts
+amount_paid = num_shares * purchase_price
+commission_paid_purchase = calculate_commission(amount_paid, commission_percent)
+amount_sold = num_shares * selling_price
+commission_paid_sale = calculate_commission(amount_sold, commission_percent)
+
+# Calculate profit or loss
+profit_loss = calculate_profit_loss(amount_sold, commission_paid_sale, amount_paid, commission_paid_purchase)
+
+# Display the results
+print("\nAmount paid for the stock:", format_currency(amount_paid))
+print("Commission paid on the purchase:", format_currency(commission_paid_purchase))
+print("Amount the stock sold for:", format_currency(amount_sold))
+print("Commission paid on the sale:", format_currency(commission_paid_sale))
+print("Profit (or loss if negative):", format_currency(profit_loss))
